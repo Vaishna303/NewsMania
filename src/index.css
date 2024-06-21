@@ -9,7 +9,7 @@
   }
   
   .auto-scroll {
-    animation: scroll 150s linear infinite;
+    animation: scroll 50s linear infinite;
   }
   
   .auto-scroll:hover {
