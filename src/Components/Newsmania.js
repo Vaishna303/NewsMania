@@ -24,13 +24,24 @@ const Newsmania = () => {
         );
         setnewsTOI(response2.data.articles);
 
+        // const response3 = await axios.get(
+        //   `https://newsapi.org/v2/top-headlines?sources=the-economic-times&apiKey=${api}`
+        // );
+        // setnewsTET(response3.data.articles);
+
+        //Instead of Economic times it will display all the top headlines from all papers in India.
         const response3 = await axios.get(
-          `https://newsapi.org/v2/top-headlines?sources=the-economic-times&apiKey=${api}`
+          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${api}`
         );
         setnewsTET(response3.data.articles);
 
+        // const response4 = await axios.get(
+        //   `https://newsapi.org/v2/top-headlines?sources=the-indian-express&apiKey=${api}`
+        // );
+        // setnewsTIE(response4.data.articles);
+
         const response4 = await axios.get(
-          `https://newsapi.org/v2/top-headlines?sources=the-indian-express&apiKey=${api}`
+          `https://newsapi.org/v2/everything?q=cricket&apiKey=${api}`
         );
         setnewsTIE(response4.data.articles);
 
@@ -78,7 +89,6 @@ const Newsmania = () => {
             </ol>
           </div>
         </div>
-
         <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
           <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">
             THE TIMES OF INDIA
@@ -102,34 +112,91 @@ const Newsmania = () => {
         </div>
 
         {/* <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
-              <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">THE ECONOMIC TIMES</p>
-              <div className="overflow-y-auto h-64 px-4 mt-4">
-                <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
-                  {newsTET.map((article, index) => (
-                    <li key={index}>
-                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {article.title}
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
+          <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">
+            THE ECONOMIC TIMES
+          </p>
+          <div className="overflow-y-auto h-64 px-4 mt-4">
+            <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
+              {newsTET.map((article, index) => (
+                <li key={index}>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div> */}
 
-            <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
-              <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">THE INDIAN EXPRESS</p>
-              <div className="overflow-y-auto h-64 px-4 mt-4">
-                <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
-                  {newsTIE.map((article, index) => (
-                    <li key={index}>
-                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {article.title}
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div> */}
+        <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
+          <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">
+            Top In INDIA
+          </p>
+          <div className="overflow-y-auto h-64 px-4 mt-4">
+            <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
+              {newsTET.map((article, index) => (
+                <li key={index}>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+
+        {/* <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
+          <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">
+            THE INDIAN EXPRESS
+          </p>
+          <div className="overflow-y-auto h-64 px-4 mt-4">
+            <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
+              {newsTIE.map((article, index) => (
+                <li key={index}>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div> */}
+        <div className="py-6 w-80 h-96 bg-purple-950 rounded-3xl hover:shadow-purple-950 shadow-2xl">
+          <p className="bg-white text-gray-900 font-bold text-2xl py-2 text-center rounded-t-lg">
+            Top In Cricket
+          </p>
+          <div className="overflow-y-auto h-64 px-4 mt-4">
+            <ol className="text-white px-4 space-y-2 list-decimal auto-scroll">
+              {newsTIE.map((article, index) => (
+                <li key={index}>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   );
