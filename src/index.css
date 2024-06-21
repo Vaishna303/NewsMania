@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom class for auto-scrolling */
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-100% + 16rem)); }
+  }
+  
+  .auto-scroll {
+    animation: scroll 150s linear infinite;
+  }
+  
+  .auto-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Hide scrollbar for Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for WebKit browsers */
+*::-webkit-scrollbar {
+  display: none;
+}
