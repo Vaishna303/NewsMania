@@ -6,7 +6,10 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="bg-gray-800 text-white px-4 py-4 flex justify-between items-center">
       <div className="flex-1 text-center">
-        <div className="text-2xl font-bold">
+        {/* <div className="text-2xl font-bold">
+          THE NEWSMANIA
+        </div> */}
+        <div className="welcome_message border-gray-800 text-center bg-slate-800 text-white font-extrabold text-4xl text-pretty rounded-b-full py-3 font-serif">
           THE NEWSMANIA
         </div>
       </div>
