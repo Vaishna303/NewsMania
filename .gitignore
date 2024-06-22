@@ -1,5 +1,22 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# completed
+# header and footer
+# cards & general news and filter by category.
+
+# Yet to Complete
+# Add an option to store the news article
+# Filter by source
+# Dark mode Toggle
+# UA - Sign Up page : name, email, password, country
+# UA - Login Page : email, passsword
+# DashBoard/Profile : Manage Notes & Saved Articles
+# Notes section : Only Logged users can create and maintain notes in their profile
+# Maintain the scrolling speed of news or just stop scrolling
+# Add pagination
+#
+
+
 # dependencies
 /node_modules
 /.pnp
@@ -21,3 +38,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
